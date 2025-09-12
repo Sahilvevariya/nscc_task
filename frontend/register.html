@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register • Event</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="bar container">
+      <a class="brand" href="/home.html">NSCC • Event</a>
+      <nav class="nav" id="mainNav2">
+        <a href="/home.html">Home</a>
+        <a href="/register.html">Register</a>
+        <a href="/admin.html">Admin</a>
+        <a href="/attendance.html">Attendance</a>
+        <a href="/previousevents.html">Previous Events</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle2" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <h2>Register for the Event</h2>
+      <p class="muted">Fill details and save the QR code on your phone.</p>
+
+      <form id="registerForm" class="form">
+        <label>
+          <span class="label-text">Full name</span>
+          <input id="name" name="name" placeholder="Your name" required />
+        </label>
+
+        <label>
+          <span class="label-text">Email</span>
+          <input id="email" name="email" type="email" placeholder="you@domain.com" required />
+        </label>
+
+        <label>
+          <span class="label-text">Registration ID</span>
+          <input id="regId" name="regId" placeholder="e.g., SV12345" required />
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Register & Generate QR</button>
+          <a class="btn ghost" href="/home.html">Back</a>
+        </div>
+      </form>
+
+      <div id="regResult" class="result"></div>
+      <small class="muted" style="display: block; text-align: center; margin-top: 15px;">Tip: Save QR image to your phone or print it for check-in.</small>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attendance Scanner • Event Attendance</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="bar container">
+      <a class="brand" href="/home.html">NSCC • Event</a>
+      <nav class="nav" id="navAttendance">
+        <a href="/home.html">Home</a>
+        <a href="/register.html">Register</a>
+        <a href="/admin.html">Admin</a>
+        <a href="/attendance.html">Attendance</a>
+        <a href="/previousevents.html">Previous Events</a>
+      </nav>
+      <button class="nav-toggle" id="navToggleAttendance" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="card">
+      <h2>Attendance Scanner</h2>
+      <p class="muted">Use the scanner to mark attendance and view participant status.</p>
+
+      <div class="scanner-controls">
+        <button id="startScanner" class="btn primary">Start Scanner</button>
+        <button id="stopScanner" class="btn ghost" disabled>Stop Scanner</button>
+        <button id="refreshList" class="btn">Refresh List</button>
+        <button id="exportBtn" class="btn">Export XLSX</button>
+      </div>
+
+      <div id="reader" style="width:100%;max-width:520px;margin:20px auto 0 auto;"></div>
+
+      <h3 style="margin-top:30px;">Participants</h3>
+      <table class="table" id="participantsTable">
+        <thead><tr><th>Name</th><th>Reg ID</th><th>Status</th><th>Time</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

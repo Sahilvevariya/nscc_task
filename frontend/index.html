@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • Event Attendance</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="bar container">
+      <a class="brand" href="/home.html">NSCC • Event</a>
+      <nav class="nav" id="navIndex">
+        <a href="/home.html">Home</a>
+        <a href="/register.html">Register</a>
+        <a href="/admin.html">Admin</a>
+        <a href="/attendance.html">Attendance</a>
+        <a href="/previousevents.html">Previous Events</a>
+      </nav>
+      <button class="nav-toggle" id="navToggleIndex" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="hero card">
+      <div class="hero-left">
+        <h1>Modern Event Attendance</h1>
+        <p class="lead">Register participants, generate QR codes, and mark attendance with a mobile scanner. Lightweight, responsive and easy to run.</p>
+        <div class="form-actions">
+          <a class="btn primary" href="/register.html">Register Now</a>
+          <a class="btn ghost" href="/admin.html">Admin Login</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="preview-card">
+          <h4>Quick Features</h4>
+          <ul>
+            <li>Simple registration form with QR output</li>
+            <li>Admin login & scanner to mark attendance</li>
+            <li>Export attendance to XLSX format</li>
+            <li>Responsive and accessible UI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards-grid">
+      <article class="small-card">
+        <h3>Fast Registration</h3>
+        <p>Collect name, email and a custom registration id. QR is generated instantly.</p>
+      </article>
+      <article class="small-card">
+        <h3>Secure Admin</h3>
+        <p>JWT-based admin login to protect marking and exports.</p>
+      </article>
+      <article class="small-card">
+        <h3>Offline Friendly</h3>
+        <p>The frontend is static HTML/CSS/JS so it's easy to host or preview locally.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

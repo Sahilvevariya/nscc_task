@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Login • Event Attendance</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="bar container">
+      <a class="brand" href="/home.html">NSCC • Event</a>
+      <nav class="nav" id="navAdmin">
+        <a href="/home.html">Home</a>
+        <a href="/register.html">Register</a>
+        <a href="/admin.html">Admin</a>
+        <a href="/attendance.html">Attendance</a>
+        <a href="/previousevents.html">Previous Events</a>
+      </nav>
+      <button class="nav-toggle" id="navToggleAdmin" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card form-card">
+      <h2>Admin Login</h2>
+      <p class="muted">Sign in to access scanner and export features.</p>
+      <form id="adminForm" class="form">
+        <label>
+          <span class="label-text">Username</span>
+          <input id="adminUser" name="username" placeholder="Admin username" required />
+        </label>
+        <label>
+          <span class="label-text">Password</span>
+          <input id="adminPass" name="password" type="password" placeholder="Password" required />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Login</button>
+          <a class="btn ghost" href="/home.html">Cancel</a>
+        </div>
+      </form>
+      <div id="adminStatus" class="muted" style="text-align: center; margin-top: 15px;"></div>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+:root {
+  --clr-admin-bg: #1A1F2A;
+  --clr-admin-panel: #232A3A;
+  --clr-admin-light: #F9FAFB;
+  --clr-admin-accent: #4F8DFF;
+  --clr-admin-muted: #A0AEC0;
+  --clr-admin-white: #E2E8F0;
+  --clr-admin-shadow: rgba(0, 0, 0, 0.4);
+  --font-main: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--clr-admin-bg);
+  color: var(--clr-admin-white);
+  font-family: var(--font-main);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ---------- Admin Navigation Bar ---------- */
+
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--clr-admin-panel);
+  box-shadow: 0 2px 8px var(--clr-admin-shadow);
+  z-index: 1000;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.brand {
+  color: var(--clr-admin-accent);
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: var(--clr-admin-white);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav a:hover {
+  background-color: var(--clr-admin-accent);
+  color: var(--clr-admin-panel);
+  transform: translateY(-2px);
+}
+
+/* ---------- Admin Card & Forms ---------- */
+
+.admin-card {
+  margin-top: 100px;
+  background: var(--clr-admin-panel);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 12px 24px var(--clr-admin-shadow);
+}
+
+.admin-card h2 {
+  color: var(--clr-admin-light);
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+.admin-form label {
+  display: block;
+  margin-top: 16px;
+}
+
+.admin-form input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  color: var(--clr-admin-white);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.admin-form input:focus {
+  outline: none;
+  border-color: var(--clr-admin-accent);
+  box-shadow: 0 4px 12px rgba(79,141,255,0.4);
+}
+
+/* ---------- Scanner Layout & Table ---------- */
+
+.scanner-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#reader {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--clr-admin-bg);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+}
+
+.table th, .table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  color: var(--clr-admin-white);
+}
+
+.table th {
+  background: var(--clr-admin-panel);
+}
+
+/* ---------- Buttons & Utilities ---------- */
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn.primary {
+  background-color: var(--clr-admin-accent);
+  color: var(--clr-admin-panel);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px var(--clr-admin-shadow);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--clr-admin-white);
+  border: 2px solid var(--clr-admin-white);
+}
+
+.btn.ghost:hover {
+  background: var(--clr-admin-white);
+  color: var(--clr-admin-panel);
+}
+
+.muted {
+  color: var(--clr-admin-muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+/* ---------- Responsive Rules ---------- */
+
+@media (max-width: 768px) {
+  .bar {
+    padding: 12px 15px;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: var(--clr-admin-panel);
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .nav.show {
+    display: flex;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .admin-card {
+    margin: 80px 10px 10px 10px;
+    padding: 20px;
+  }
+}
