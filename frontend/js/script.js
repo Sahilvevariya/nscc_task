@@ -119,9 +119,10 @@ if (document.getElementById('reader')) {
       return;
     }
     try {
-      const res = await fetchJson('/api/scan/all', {
-        headers: { 'Authorization': 'Bearer ' + token }
+      const res = await fetchJson('/api/scan/all/participants', {
+      headers: { 'Authorization': 'Bearer ' + token }
       });
+
       if (!res.ok) {
         tableBody.innerHTML = `<tr><td colspan="4">No participant list endpoint or error: ${res.status}</td></tr>`;
         return;
